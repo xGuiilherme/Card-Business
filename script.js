@@ -8,18 +8,14 @@ function toggleMode() {
   //     html.classList.add("light");
   //   }
 
-  // O metodo toggle faz a mesma coisa do If/Else, porem ele faz essa alteração por de baixo dos panos ao clicar no botão.
+  // O metodo toggle faz a mesma coisa do If/Else, porem faz essa alteração por de baixo dos panos.
   html.classList.toggle("light");
 
-  // Pega a tag imag
-    const img = document.querySelector("#profile-img") {
-
-        if(html.classList.contains('light')) {
-          // se tiver light mode, adicionar a nova imagem light.
-          img.setAttribute('src', './assets/avatar-light.png')
-        } else {
-          // se tiver sem light mode, manter a imagem normal.
-          img.setAttribute('src', './assets/avatar.png')
-        }
-    }
+  // Pega a tag imag para troca de imagem
+  const img = document.querySelector("#profile img");
+  if (html.classList.contains("light")) {
+    img.setAttribute("src", "assets/avatar-lightmode.png");
+  } else {
+    img.setAttribute("src", "assets/avatar.png");
+  }
 }
