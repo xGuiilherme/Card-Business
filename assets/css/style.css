@@ -86,11 +86,18 @@ body * {
   left: 0;
   z-index: 1; /* z-index ele muda o andares do objeto */
   transform: translateY(-50%);
+
+  animation: slide-back 0.2s;
 }
 
+/* Quando clicar no light ele vai aplicar a animação do switch */
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+/* Defini propriedade ao passar o mouse em cima */
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 /* Defini as dimensões do botão para mudança de tema */
@@ -181,5 +188,24 @@ footer {
 
   .light {
     --bg-url: url(../image/bg-mobile-light.jpg);
+  }
+}
+
+/* Cria uma animação para o botão switch */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
