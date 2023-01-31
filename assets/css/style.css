@@ -30,6 +30,7 @@
 /* Defini a imagem de fundo da tela */
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 /* Defini o stilo e cor da font */
@@ -170,4 +171,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* Media queries - tudo que começa @ é uma role */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(../image/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(../image/bg-mobile-light.jpg);
+  }
 }
