@@ -46,4 +46,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ :wave:
+Feito com ♥ by Guilherme :wave:
